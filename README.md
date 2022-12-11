@@ -15,3 +15,7 @@ Code: let myPizza = new Pizza("medium",["meat-balls", "piña", "quesito"]);
 myPizza.addToppingPrice();
 Expected Output: 15
 
+Test: It should return final pizza price
+Code:  let myPizza = new Pizza("medium",["meat-balls", "piña", "quesito"]);
+myPizza.addFinalPrice();
+Expected Output: 30

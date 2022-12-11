@@ -39,6 +39,11 @@ Pizza.prototype.addToppingPrice = function () {
   return this.toppingPrice;
 };
 
+Pizza.prototype.addFinalPrice = function () {
+  this.totalPrice = this.sizePrice + this.toppingPrice;
+  return this.totalPrice;
+};
+
     
 
 
