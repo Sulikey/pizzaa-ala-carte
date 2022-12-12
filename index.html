@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  
-  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Pizza A la Carte</title>
 </head>
 <body>
+  <h1>Pizza A la Carte</h1>
+  <form id="pizza-form">
+    <h2>Select your pizza size!</h2>
+    <label  for="sm">Small $10 </label>
+    <input name="size-checked" id="sm" type="radio" value="small" checked>
+    <label for="size-me">Medium $15</label>
+    <input name="size-checked" id="me" type="radio" value="medium">
+    <label for="lg">Large $20</label>
+    <input name="size-checked"id="lg" type="radio" value="large">
+
+    <h2>Select your toppings each $5!</h2>
+    <label for="meat-balls">Meat Balls</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" meat-balls">
+    <label for="green-eggs-and-ham">Green Eggs and Ham</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" green-eggs-and-ham">
+    <label for="spicy-chorizo">Spicy Chorizo</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" spicy-chorizo">
+    <label for="gummy-bears">Gummy Bears</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" gummy-bears">
+    <label for="piña">Piña</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" piña ">
+    <label for="nutella-con-banana">Nutella Con Bananas</label>
+    <input name="topping-checked" id="topping" type="checkbox" value=" nutella-con-banana ">
+    <br>
+    <button type="submit">Place your Order!</button>
+
+  </form>
+  <div id="display-pizza" class="hidden">
+    <h3>Zizzer-Zazzer-Zuzz thanks for placing your order!</h3>
+    <p>
+      <span id="size-display"></span><br>
+      <span id="topping-display"></span><br>
+      Total Amount $<span id="price-display"></span>
+    </p>
+
+  </div>
   
 </body>
 </html>
