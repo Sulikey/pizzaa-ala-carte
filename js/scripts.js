@@ -66,8 +66,7 @@ function handleSubmission (event) {
 document.querySelector("span#price-display").innerText = newPizza.totalPrice;
   document.querySelector("div#display-pizza").removeAttribute("class");
 }
+
 window.addEventListener("load",function() {
   document.querySelector("form#pizza-form").addEventListener("submit",handleSubmission)
- 
-
 });
