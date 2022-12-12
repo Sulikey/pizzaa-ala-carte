@@ -1,4 +1,4 @@
-function Pizza(size, toppings) {
+function Pizza(size, toppings =[]) {
   this.size = size;
   this.toppings = toppings;
   this.sizePrice = 0;
@@ -44,6 +44,30 @@ Pizza.prototype.addFinalPrice = function () {
   return this.totalPrice;
 };
 
-    
+//UI
+function handleSubmission (event) {
+  event.preventDefault();
+  // in this section we get the value for each form input
+  const sizeOfPizza = document.querySelector("input[name=size-checked]:checked").value;
+  const toppingsSelectedArray = []
+  const toppingOnPizza = document.querySelectorAll("input[name=topping-checked]:checked");
+  for (let i = 0; i < toppingOnPizza.length; i++) {
+    toppingsSelectedArray.push(toppingOnPizza[i].value)
+  }
+  let newPizza = new Pizza (sizeOfPizza, toppingsSelectedArray);
 
+  newPizza.addSizePrice();
+  newPizza.addToppingPrice();
+  newPizza.addFinalPrice();
 
+  // then we set variables to the values we got from the form
+  document.querySelector("span#size-display").innerText = sizeOfPizza;
+  document.querySelector("span#topping-display").innerText = newPizza.toppings;
+document.querySelector("span#price-display").innerText = newPizza.totalPrice;
+  document.querySelector("div#display-pizza").removeAttribute("class");
+}
+window.addEventListener("load",function() {
+  document.querySelector("form#pizza-form").addEventListener("submit",handleSubmission)
+ 
+
+});
