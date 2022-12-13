@@ -20,19 +20,19 @@ Pizza.prototype.addSizePrice = function () {
 
 Pizza.prototype.addToppingPrice = function () {
   let price = 0;
-  if (this.toppings.includes("meat-balls")) {
+  if (this.toppings.includes(" meat-balls")) {
     price += 5;
-  } if (this.toppings.includes("green-eggs-and-ham")) {
+  } if (this.toppings.includes(" green-eggs-and-ham")) {
     price += 5; 
-  } if (this.toppings.includes("spicy-chorizo")) {
+  } if (this.toppings.includes(" spicy-chorizo")) {
     price += 5;
-  } if (this.toppings.includes("gummy-bears")) {
+  } if (this.toppings.includes(" gummy-bears")) {
     price += 5;
-  } if (this.toppings.includes("piña")) {
+  } if (this.toppings.includes(" piña")) {
     price += 5;
-  } if (this.toppings.includes("quesito")) {
+  } if (this.toppings.includes(" quesito")) {
     price += 5;
-  } if (this.toppings.includes("nutella-con-banana")) {
+  } if (this.toppings.includes(" nutella-con-banana")) {
   price += 5;
   }
   this.toppingPrice = price;
